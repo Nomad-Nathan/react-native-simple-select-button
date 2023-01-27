@@ -15,6 +15,8 @@ const SimpleSelectButton = ({
   textSelectedColor,
   isChecked,
   style,
+  styleText,
+  StyleIcon,
   ...props
  }) => {
 
@@ -25,13 +27,20 @@ const SimpleSelectButton = ({
         >
 
         <View 
-          style={style}>
+          style={{ 
+            flexDirection: 'row',
+            borderRadius: 5,
+            overflow: 'hidden',
+            textAlign: 'center',
+            justifyContent: 'center',
+            backgroundColor: isChecked === true ? buttonSelectedColor : buttonDefaultColor 
+          }}>
             <Text
-              style={[styles.button_item, { fontSize: textSize, color: isChecked === true ? textSelectedColor : textDefaultColor } ]}>
+              style={[styleText, { fontSize: textSize, color: isChecked === true ? textSelectedColor : textDefaultColor } ]}>
               {text}
             </Text>
             <Text 
-              style={[styles.button_item, { position: 'absolute', right: 25, }]}>
+              style={styleIcon}>
               <MaterialCommunityIcons name={iconName} size={iconSize} color={iconColor} />
             </Text>
         </View>
