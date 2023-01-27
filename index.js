@@ -14,6 +14,7 @@ const SimpleSelectButton = ({
   textDefaultColor,
   textSelectedColor,
   isChecked,
+  style,
   ...props
  }) => {
 
@@ -24,14 +25,7 @@ const SimpleSelectButton = ({
         >
 
         <View 
-          style={{ 
-            flexDirection: 'row',
-            borderRadius: 5,
-            overflow: 'hidden',
-            textAlign: 'center',
-            justifyContent: 'center',
-            backgroundColor: isChecked === true ? buttonSelectedColor : buttonDefaultColor 
-          }}>
+          style={style}>
             <Text
               style={[styles.button_item, { fontSize: textSize, color: isChecked === true ? textSelectedColor : textDefaultColor } ]}>
               {text}
@@ -50,7 +44,7 @@ const SimpleSelectButton = ({
 const styles = StyleSheet.create({
     button_item: {
         padding: 8,
-        marginVertical: 5,
+        margin: 5,
         borderRadius: 5,
         textAlign: 'center'
     },
