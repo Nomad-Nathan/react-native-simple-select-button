@@ -37,8 +37,8 @@ const SimpleSelectButton = ({
               {text}
             </Text>
             <Text 
-              style={[styles.button_item, { position: 'absolute', right: 25, }]}>{isChecked === true ?
-              <MaterialCommunityIcons name={iconName} size={iconSize} color={iconColor} /> : null}
+              style={[styles.button_item, { position: 'absolute', right: 25, }]}>
+              <MaterialCommunityIcons name={iconName} size={iconSize} color={iconColor} />
             </Text>
         </View>
 
