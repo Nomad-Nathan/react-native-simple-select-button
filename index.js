@@ -1,6 +1,6 @@
 import React from 'react'
 import { View, StyleSheet, TouchableOpacity, Text } from 'react-native'
-import { AntDesign } from '@expo/vector-icons'
+import { AntDesign, MaterialCommunityIcons } from '@expo/vector-icons'
 
 
 const SimpleSelectButton = ({ 
@@ -38,7 +38,7 @@ const SimpleSelectButton = ({
             </Text>
             <Text 
               style={[styles.button_item, { position: 'absolute', right: 25, }]}>{isChecked === true ?
-              <AntDesign name={iconName} size={iconSize} color={iconColor} /> : null}
+              <MaterialCommunityIcons name={iconName} size={iconSize} color={iconColor} /> : null}
             </Text>
         </View>
 
