@@ -16,7 +16,7 @@ const SimpleSelectButton = ({
   isChecked,
   style,
   styleText,
-  StyleIcon,
+  styleIcon,
   ...props
  }) => {
 
